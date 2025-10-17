@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Audio</title>
+</head>
+<body>
+    <div id="allMusic">
+        <button id="randomTrack">random</button>
+    </div>
+    <div id="musicCard" style="display:none">
+        <button id="toAllMusic">back to list</button>
+        <img id="image" src="">
+        <div id="trackInfo"></div>
+        <audio id="audio" src=""></audio>
+        <div id="time">
+            <span id="nowTime">0:00</span> / <span id="duration">0:00</span>
+            <input type="range" id="regulTime" value="0" min="0" step="1">
+        </div>
+        <div id="button">
+            <button id="back">back</button>
+            <button id="play">play</button>
+            <button id="next">next</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body{
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+}
+
+#allMusic{
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #1db954;
+    border-radius: 15px;
+    background-color: #181818;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#allMusic button{
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#allMusic button:hover{
+    background-color: #1ed760;
+}
+
+#allMusic div{
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #282828;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#allMusic div:hover{
+    background-color: #3e3e3e;
+}
+
+#musicCard{
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #1db954;
+    border-radius: 15px;
+    background-color: #181818;
+    width: 290px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+}
+
+#toAllMusic{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#toAllMusic:hover{
+    background-color: #1ed760;
+}
+
+#image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#trackInfo{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+#button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#button button{
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#button button:hover{
+    background-color: #1ed760;
+}
+
+#regulTime{
+    width: 100%;
+    margin-top: 10px;
+    appearance: none;
+    height: 6px;
+    background: #3e3e3e;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+#regulTime:hover{
+    background: #4e4e4e;
+}
+
+#regulTime::-webkit-slider-thumb{
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: none;
+}
+
+#regulTime::-webkit-slider-thumb:hover{
+    background: #126931;
+}
