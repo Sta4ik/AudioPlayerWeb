@@ -21,14 +21,18 @@ let allMusic = document.getElementById("allMusic");
 let trackInfo = document.getElementById("trackInfo");
 let musicCard = document.getElementById("musicCard");
 let image = document.getElementById("image");
+
 const nextBut = document.getElementById("next");
 const backBut = document.getElementById("back");
 const playBut = document.getElementById("play");
 const backToListBut = document.getElementById("toAllMusic");
 const randomBut = document.getElementById("randomTrack");
+
 const nowTime = document.getElementById("nowTime");
 const duration = document.getElementById("duration");
 const regulTime = document.getElementById("regulTime");
+
+const regulVolume = document.getElementById("regulVolume");
 
 let counter = 0;
 audio.src = music[counter];
@@ -42,7 +46,7 @@ function next(){
     trackInfo.textContent = musicInfo[counter];
     image.src = musicImage[counter];
     audio.play();
-    playBut.textContent = "pause"
+    playBut.textContent = "❚❚";
 };
 
 function back(){
@@ -51,16 +55,16 @@ function back(){
     trackInfo.textContent = musicInfo[counter];
     image.src = musicImage[counter];
     audio.play();
-    playBut.textContent = "pause"
+    playBut.textContent = "❚❚";
 };
 
 function play(){
     if(audio.paused){
         audio.play();
-        playBut.textContent = 'pause';
+        playBut.textContent = '❚❚';
     }else{
         audio.pause();
-        playBut.textContent = 'play';
+        playBut.textContent = '▶';
     }
 };
 
@@ -70,7 +74,7 @@ function selectionTrack(i){
     trackInfo.textContent = musicInfo[i];
     image.src = musicImage[counter];
     audio.play();
-    playBut.textContent = "pause";
+    playBut.textContent = "❚❚";
     allMusic.style.display = "none";
     musicCard.style.display = "block";
 };
@@ -89,12 +93,12 @@ function randomTrack(){
     allMusic.style.display = "none";
     musicCard.style.display = "block";
     audio.play();
-    playBut.textContent = "pause";
+    playBut.textContent = "❚❚";
 };
 
 function formatTime(seconds) {
     const min = Math.floor(seconds / 60);
-    const sec = seconds % 60
+    const sec = seconds % 60;
     return `${min}:${sec < 10 ? "0" + sec : sec}`;
 };
 
@@ -110,6 +114,10 @@ function updateRegulTime(){
 
 function changeTime(){
     audio.currentTime = regulTime.value;
+}
+
+function changeVolume(){
+    audio.volume = regulVolume.value / 100;
 }
 
 for(let i = 0; i < musicInfo.length; ++i){
@@ -129,3 +137,4 @@ audio.addEventListener('ended', next);
 audio.addEventListener("loadedmetadata", getDuration);
 audio.addEventListener("timeupdate", updateRegulTime);
 regulTime.addEventListener("input", changeTime);
+regulVolume.addEventListener("input", changeVolume);
